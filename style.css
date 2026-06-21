@@ -175,3 +175,31 @@ select {
     font-size: 17px;
   }
 }
+
+input[type="date"] {
+  background: white;
+  color: #333;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.final-message {
+  font-size: 22px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.final-message span {
+  display: block;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .final-message {
+    font-size: 20px;
+  }
+
+  .ticket {
+    padding: 20px 14px;
+  }
+}
