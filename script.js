@@ -169,10 +169,10 @@ function showResult() {
 
       <hr>
 
-      <h2 style="font-size:18px; text-align:center;">
-        なーちゃんこれからもよろしくねー<br>
-        大好きやで
-      </h2>
+      <h2 class="final-message">
+ 　　 <span>なーちゃんこれからもよろしくね</span>
+ 　 　<span>大好きやで</span>
+　　　</h2>
 
       <p>❤️ ❤️ ❤️ ❤️ ❤️</p>
     </div>
