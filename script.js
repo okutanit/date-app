@@ -197,8 +197,42 @@ function goBack() {
   }
 }
 
+function saveTicket() {
+  const ticket = document.getElementById("ticket");
+
+  html2canvas(ticket, {
+    scale: 2,
+    backgroundColor: "#ffffff"
+  }).then(canvas => {
+    canvas.toBlob(blob => {
+      const file = new File(
+        [blob],
+        "date-ticket.png",
+        { type: "image/png" }
+      );
+
+      if (
+        navigator.canShare &&
+        navigator.canShare({ files: [file] })
+      ) {
+        navigator.share({
+          files: [file],
+          title: "DATE TICKET",
+          text: "デートチケットできたで"
+        });
+      } else {
+        const link = document.createElement("a");
+        link.download = "date-ticket.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      }
+    });
+  });
+}
+
 window.selectPlace = selectPlace;
 window.selectFood = selectFood;
 window.goBack = goBack;
+window.saveTicket = saveTicket;
 
 showTop();
