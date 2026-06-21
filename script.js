@@ -20,7 +20,7 @@ function showTop() {
 
   card.innerHTML = `
     <div class="icon">🐶</div>
-    <h1>俺とデート行かない？</h1>
+    <h1>俺とデート行かへん？</h1>
     <p>Will you go on a date with me?</p>
 
     <div class="buttons">
